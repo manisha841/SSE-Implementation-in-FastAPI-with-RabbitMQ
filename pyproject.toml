@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "projects"
+version = "0.1.0"
+description = ""
+authors = ["Manisha Bhandari <manisha.bhandari@codavatar.tech>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.103.2"
+uvicorn = {extras = ["standard"], version = "^0.23.2"}
+edgedb = "^1.7.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
