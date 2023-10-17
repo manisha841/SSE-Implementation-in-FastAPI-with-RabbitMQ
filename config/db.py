@@ -17,7 +17,7 @@ EDGEDB_TLS_CA=os.getenv('EDGEDB_TLS_CA')
 
 async def setup_edgedb(app):
     global client
-    client = app.state.edgedb = edgedb.create_async_client(
+    client = edgedb.create_async_client(
         host=EDGEDB_HOST,
         port=EDGEDB_PORT,
         user=EDGEDB_USER,
@@ -26,9 +26,9 @@ async def setup_edgedb(app):
         tls_ca=EDGEDB_TLS_CA,
         tls_security="default",
     )
-    return await client.ensure_connected()
+    await client.ensure_connected()
+    return client
 
 
 async def shutdown_edgedb(app):
-    client, app.state.edgedb = app.state.edgedb, None
     await client.aclose()

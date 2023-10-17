@@ -2,11 +2,11 @@
 name = "projects"
 version = "0.1.0"
 description = ""
-authors = ["Manisha Bhandari <manisha.bhandari@codavatar.tech>"]
+authors = ["Manisha Bhandari <manishabhandari841@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = ">=3.10"
 fastapi = "^0.103.2"
 uvicorn = {extras = ["standard"], version = "^0.23.2"}
 edgedb = "^1.7.0"

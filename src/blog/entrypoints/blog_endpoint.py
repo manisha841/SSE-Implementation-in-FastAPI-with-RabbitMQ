@@ -1,4 +1,5 @@
 from uuid import UUID
+from src.blog.service_layer import blog_service
 
 from fastapi import APIRouter, Depends, Request,status
 
@@ -14,4 +15,12 @@ async def create_blog(
     blog_info:BlogPayload,
 ):
     con = ''
-    blog_obj = await 
+    blog_obj = await blog_service.create_blog(
+        title=blog_info.title,
+        content=blog_info.content,
+        author=blog_info.author,
+        comments=blog_info.comments,
+        con=con,
+        )
+    return blog_obj
+    
