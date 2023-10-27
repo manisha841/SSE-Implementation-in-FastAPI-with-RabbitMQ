@@ -13,6 +13,8 @@ import os
 
 load_dotenv()
 
+app = FastAPI()
+
 
 EDGEDB_HOST=os.getenv('EDGEDB_HOST')
 EDGEDB_PORT=os.getenv('EDGEDB_PORT')
