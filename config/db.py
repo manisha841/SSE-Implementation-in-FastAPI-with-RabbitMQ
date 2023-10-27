@@ -32,3 +32,5 @@ async def setup_edgedb(app):
 
 async def shutdown_edgedb(app):
     await client.aclose()
+
+
