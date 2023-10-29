@@ -4,7 +4,7 @@ from aio_pika import DeliveryMode, ExchangeType, Message, connect
 from aio_pika.abc import AbstractIncomingMessage
 from fastapi import Request
 
-from core.utils.custom_encoder import CustomEncoder
+from custom_encoder import CustomEncoder
 
 async def connect_to_rabbitmq(request: Request):
     """Establishes a connection to RabbitMQ using FastAPI request settings."""
